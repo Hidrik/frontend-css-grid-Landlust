@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-gap: 8px;
+    grid-gap: 16px;
     background-color: beige;
     grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-template-columns: 1fr;
@@ -12,7 +12,6 @@
     "center"
     "."
     "footer"
-
 }
 
 @media screen and (min-width: 800px) {
