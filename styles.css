@@ -1,1 +1,63 @@
-/*Maak hier jouw CSS!*/
+.container {
+    display: grid;
+    grid-gap: 8px;
+    background-color: beige;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "aside-left"
+    "content"
+    "right-center"
+    "center"
+    "."
+    "footer"
+
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "header content content"
+            "aside-left content content"
+            "aside-left center right-center"
+            "aside-left center ."
+            "footer footer footer";
+    }
+}
+
+.A, .B, .C, .D, .E, .F {
+    background-color: red;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.A {
+    grid-area: header;
+}
+
+.B {
+    grid-area: aside-left;
+}
+
+.C {
+    grid-area: content;
+}
+
+.E {
+    grid-area: center;
+}
+
+.D {
+    grid-area: right-center;
+}
+
+.F {
+    grid-area: footer;
+}
